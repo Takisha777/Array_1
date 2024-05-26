@@ -6,10 +6,12 @@ const giveParcel = (peopleWaiting) => {
 }
 const leaveQueueWithoutParcel = (peopleWaiting) => {
     peopleWaiting.shift();
-    for (let leavePeople of peopleWaiting){
-        alert(`${leavePeople} не получил(а) посылку и ушел(ла) из очереди`);
+    for (let i = 0; i < peopleWaiting.length;) {
+        alert(`${peopleWaiting[0]} не получил(а) посылку и ушел(ла) из очереди`);
+        peopleWaiting.shift();
     }
 }
 console.log(giveParcel(peopleWaiting));
 console.log(giveParcel(peopleWaiting));
 console.log(leaveQueueWithoutParcel(peopleWaiting));
+console.log(peopleWaiting);
